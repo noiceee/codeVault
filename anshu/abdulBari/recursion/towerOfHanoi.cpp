@@ -5,7 +5,7 @@ using namespace std;
 void towerOH(int n, int a, int b, int c) {
   if (n > 0) {
     towerOH(n - 1, a, c, b);
-    cout << "from " << a << " to " << c<<"\n";
+    cout << "from " << a << " to " << c << "\n";
     towerOH(n - 1, b, a, c);
   }
 }
