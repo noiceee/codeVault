@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+}
+
+h2 {
+    color: rgb(243, 84, 36);
+    font-family: Arial;
+    font-size: 35px;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 400px;
+    width: 50%;
+    opacity: 0.9;
+}
+
+hr {
+    border: 10px solid #f1f1f1;
+    margin: 30px;
+}
+
+.form {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: azure;
+    border: 5px solid gray;
+    margin: auto;
+    width: 50%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px -50px 22px 10px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=submit] {
+    font-size: 20px;
+    text-align: center;
+    width: 15%;
+    padding: 15px;
+    margin: 5px 0 22px 350px;
+    display: inline-block;
+    border: none;
+    border-radius: 10rem;
+    background: #f47a7a;
+    opacity: 0.7;
+}
+
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
