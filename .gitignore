@@ -25,11 +25,13 @@
 *.la
 *.a
 *.lib
+*.idea
 
 # Executables
 *.exe
 *.out
 *.app
+
 
 # File
 /checks.json
