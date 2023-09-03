@@ -33,4 +33,8 @@ int main() {
   cout << "Enter size";
   cin >> q.size;
   q.Q = new int[q.size];
+  for (int i = 0; i < q.size; i++) {
+    cout << "val [" << i << "] : ";
+    cin >> q.Q[i];
+  }
 }
