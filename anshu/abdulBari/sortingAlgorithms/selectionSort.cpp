@@ -1,16 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void insertionSort(int *arr, int &n) {
-  for (int i = 1; i < n; i++) {
-    int j = i - 1;
-    int x = arr[i];
-
-    while (arr[j] > x && j > -1) {
-      arr[j + 1] = arr[j];
-      j--;
+void selectionSort(int *arr, int &n) {
+  int temp;
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = i, k = i + 1; j < n; j++) {
+      if (arr[j] < arr[k]) {
+        k = j;
+        temp = arr[k];
+        arr[k] = arr[i];
+        arr[i] = temp;
+      }
     }
-    arr[j + 1] = x;
   }
 }
 
@@ -25,7 +26,9 @@ int main() {
     cout << "arr [" << i << "] : ";
     cin >> arr[i];
   }
-  insertionSort(arr, size);
+
+  selectionSort(arr, size);
+
   for (int i = 0; i < size; i++) {
     cout << arr[i] << " ";
   }

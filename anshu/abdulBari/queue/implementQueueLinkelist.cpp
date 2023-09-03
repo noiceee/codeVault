@@ -25,18 +25,17 @@ void enqueue(int x) {
   }
 }
 
-int dequeue(){
-    int x=-1;
-    Node *p;
-    if(front==NULL){
-        cout<<"Queue is Empty";
-    }
-    else{
-        p = front;
-        front = front->next;
-        x=p->data;
-        delete p;
-    }
+int dequeue() {
+  int x = -1;
+  Node *p;
+  if (front == NULL) {
+    cout << "Queue is Empty";
+  } else {
+    p = front;
+    front = front->next;
+    x = p->data;
+    delete p;
+  }
 
-    return x;
+  return x;
 }
