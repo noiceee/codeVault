@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 using namespace std;
 
 class node {
@@ -14,13 +15,25 @@ public:
   }
 };
 
-void maxElement(node* root){
-    int root_val , left , right , max = INT_MIN;
-    if(root){
-        root_val = root->data;
-        left = maxElement(root->left);
-        right = maxElement(root->right);
+// myself
+void maxElement(node *root) {
+  int root_val, left, right, max = INT_MIN;
+  stack<node *> S;
+  while (1) {
+    while (root) {
+      S.push(root);
+      root = root->left;
     }
+    if (S.empty())
+      break;
+    if (S.top()->data > max) {
+      max = S.top()->data;
+    }
+    root = S.top();
+    S.pop();
+    root = root->right;
+  }
+  cout << max << " max";
 }
 
 node *createTree(node *root) {
@@ -37,10 +50,10 @@ node *createTree(node *root) {
   root->left = createTree(root->left);
   cout << "Enter node right of " << val << " : ";
   root->right = createTree(root->right);
-
   return root;
 }
-int main() { 
-    node *root = NULL; 
-    root = createTree(root);
-    }
+int main() {
+  node *root = NULL;
+  root = createTree(root);
+  maxElement(root);
+}
