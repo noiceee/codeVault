@@ -11,6 +11,7 @@ const clock = () => {
 
     const diff = (end - now) / 1000;
 
+    // after the clock down ends
     if (diff < 0) {
         document.getElementById("done").innerText = congo;
         document.getElementById("today").innerText = bday;
