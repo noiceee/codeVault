@@ -359,7 +359,7 @@ int main() {
 
     // 3rd traingle
     for (int j = n; j > i; j--) {
-      cout << j-i;
+      cout << j - i;
     }
     cout << endl;
   }
