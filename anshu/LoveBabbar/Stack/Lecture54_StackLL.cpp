@@ -2,25 +2,37 @@
 using namespace std;
 
 class sNode {
+public:
   int data;
-  int top;
   sNode *next;
-
-public: 
+  sNode *top ;
 
   void push(int val);
   void pop();
   void peek();
   void isempty();
 
-};
-sNode *top = NULL;
-void sNode::push(int val){
-    sNode *temp = new sNode ;
-    temp->data = val;
-    temp->next = top;
-  
+  sNode(){
+      top->data = -1;
+      top->next = NULL;
+  }
 
+};
+
+void sNode::push(int val) {
+  sNode *temp = new sNode;
+  temp->data = val;
+  temp->next = NULL;
+  top->next = temp;
+}
+void sNode::peek() {
+  cout<<top->data<<endl ; 
 }
 
-int main() { int }
+int main() {
+  sNode stack ; 
+  stack.push(10);
+  stack.push(20);
+  stack.push(30);
+  stack.peek();
+}
